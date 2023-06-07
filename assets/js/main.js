@@ -173,33 +173,6 @@ function imageMoving() {
     }
   });
 }
-/* Send form */
-
-
-function sendForm() {
-  if ($('.js-form').length) {
-    $('.js-form').each(function () {
-      $(this).validate({
-        errorClass: 'error wobble-error',
-        submitHandler: function submitHandler(form) {
-          $.ajax({
-            type: "POST",
-            url: "mail.php",
-            data: $(form).serialize(),
-            success: function success() {
-              $('#error').modal('hide');
-              $('#success').modal('show');
-            },
-            error: function error() {
-              $('#success').modal('hide');
-              $('#error').modal('show');
-            }
-          });
-        }
-      });
-    });
-  }
-}
 /* Paralax on Project and Blog pages */
 
 
